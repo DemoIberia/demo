@@ -1,52 +1,89 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Local JS</title>
+    <title>Portal de Demos Mitel</title>
 
     <style>
+        :root {
+            --mitel-blue: #003b71;
+            --mitel-purple: #6f2c91;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
+            font-family: "Segoe UI", Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(
+                135deg,
+                var(--mitel-blue),
+                var(--mitel-purple)
+            );
         }
 
-        button {
-            padding: 10px 16px;
-            cursor: pointer;
+        .container {
+            text-align: center;
+            background: white;
+            padding: 60px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            width: 90%;
         }
 
-        #out {
-            margin-top: 15px;
-            font-weight: bold;
+        h1 {
+            color: var(--mitel-blue);
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        .demo-button {
+            display: inline-block;
+            padding: 18px 36px;
+            background: var(--mitel-purple);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .demo-button:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
         }
     </style>
 </head>
 
 <body>
-    <h1>Página web local con JavaScript</h1>
 
-    <p>Pulsa el botón para ejecutar JavaScript localmente.</p>
+    <div class="container">
+        <h1>Portal de Demos Mitel</h1>
 
-    <button id="btnSaludo">
-        Ejecutar JS
-    </button>
+        <p>
+            Selecciona una demostración para acceder al escenario correspondiente.
+        </p>
 
-    <div id="out"></div>
+        <a href="hotel.html" class="demo-button">
+            🏨 Demo Hotel Mitel
+        </a>
+    </div>
 
-    <script>
-        const boton = document.getElementById("btnSaludo");
-        const salida = document.getElementById("out");
-
-        boton.addEventListener("click", () => {
-            salida.textContent =
-                `JavaScript funcionando correctamente. Hora: ${new Date().toLocaleTimeString()}`;
-        });
-    </script>
-    <script>
-        import(`https://eu.engage.app/api/ecs/v1/loader/1cc9cc96-e572-4357-b645-b3f1b7cea843.js?path=${encodeURIComponent(window.location.origin+window.location.pathname)}&selectedVersion=${(new URLSearchParams(window.location.search)).get('ecsSelectedVersion') || ''}`)
-    </script>
 </body>
+
 </html>
