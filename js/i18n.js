@@ -9,7 +9,7 @@ const translations = {
     hotel: {
       pageTitle: 'Hotel Mitel',
       logo: 'Hotel Mitel',
-      location: 'Madrid · España',
+      location: 'España',
       heroTitle: 'Bienvenido a Hotel Mitel',
       heroText: 'Una experiencia premium para negocios y ocio.',
       heroButton: 'Reservar ahora',
@@ -35,7 +35,7 @@ const translations = {
       ctaTitle: '¿Necesitas ayuda para reservar?',
       ctaText: 'Nuestro asistente virtual está disponible 24x7 para resolver cualquier consulta.',
       ctaButton: 'Contactar',
-      footer: '© 2026 Hotel Mitel · Madrid · España'
+      footer: '© 2026 Hotel Mitel · España'
     }
   },
   en: {
@@ -48,7 +48,7 @@ const translations = {
     hotel: {
       pageTitle: 'Mitel Hotel',
       logo: 'Mitel Hotel',
-      location: 'Madrid · Spain',
+      location: 'United Kingdom',
       heroTitle: 'Welcome to Mitel Hotel',
       heroText: 'A premium experience for business and leisure.',
       heroButton: 'Book now',
@@ -74,7 +74,7 @@ const translations = {
       ctaTitle: 'Need help booking?',
       ctaText: 'Our virtual assistant is available 24x7 to answer any questions.',
       ctaButton: 'Contact us',
-      footer: '© 2026 Mitel Hotel · Madrid · Spain'
+      footer: '© 2026 Mitel Hotel · United Kingdom'
     }
   },
   pt: {
@@ -87,7 +87,7 @@ const translations = {
     hotel: {
       pageTitle: 'Hotel Mitel',
       logo: 'Hotel Mitel',
-      location: 'Madrid · Portugal',
+      location: 'Portugal',
       heroTitle: 'Bem-vindo ao Hotel Mitel',
       heroText: 'Uma experiência premium para negócios e lazer.',
       heroButton: 'Reservar agora',
@@ -113,7 +113,7 @@ const translations = {
       ctaTitle: 'Precisa de ajuda para reservar?',
       ctaText: 'O nosso assistente virtual está disponível 24x7 para responder a qualquer pergunta.',
       ctaButton: 'Contactar',
-      footer: '© 2026 Hotel Mitel · Madrid · Portugal'
+      footer: '© 2026 Hotel Mitel · Portugal'
     }
   }
 };
