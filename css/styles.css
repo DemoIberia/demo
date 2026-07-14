@@ -66,6 +66,28 @@ body.hotel-page {
     opacity: 0.9;
 }
 
+.lang-switcher {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.lang-btn {
+    border: 1px solid var(--mitel-blue);
+    background: white;
+    color: var(--mitel-blue);
+    padding: 8px 14px;
+    border-radius: 999px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.lang-btn.active {
+    background: var(--mitel-blue);
+    color: white;
+}
+
 .hotel-page header {
     background: linear-gradient(90deg, var(--mitel-blue), var(--mitel-purple));
     color: white;

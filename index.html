@@ -9,20 +9,27 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body class="home-page">
+<body class="home-page" data-page="home">
 
     <div class="container">
-        <h1>Portal de Demos Mitel</h1>
+        <div class="lang-switcher" aria-label="Language selector">
+            <button class="lang-btn active" data-lang="es">ES</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="pt">PT</button>
+        </div>
 
-        <p>
+        <h1 data-i18n="title">Portal de Demos Mitel</h1>
+
+        <p data-i18n="subtitle">
             Selecciona una demostración para acceder al escenario correspondiente.
         </p>
 
-        <a href="hotel.html" class="demo-button">
+        <a href="hotel.html" class="demo-button" data-i18n="cta">
             🏨 Demo Hotel Mitel
         </a>
     </div>
 
+    <script src="js/i18n.js"></script>
 </body>
 
 </html>

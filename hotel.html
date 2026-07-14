@@ -9,33 +9,39 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body class="hotel-page">
+<body class="hotel-page" data-page="hotel">
+
+    <div class="lang-switcher" aria-label="Language selector">
+        <button class="lang-btn active" data-lang="es">ES</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="pt">PT</button>
+    </div>
 
     <header>
-        <div class="logo">Hotel Mitel</div>
-        <div>Madrid · España</div>
+        <div class="logo" data-i18n="logo">Hotel Mitel</div>
+        <div data-i18n="location">Madrid · España</div>
     </header>
 
     <section class="hero">
         <div class="hero-overlay">
             <div class="hero-content">
-                <h1>Bienvenido a Hotel Mitel</h1>
-                <p>Una experiencia premium para negocios y ocio.</p>
-                <a href="#" class="btn">Reservar ahora</a>
+                <h1 data-i18n="heroTitle">Bienvenido a Hotel Mitel</h1>
+                <p data-i18n="heroText">Una experiencia premium para negocios y ocio.</p>
+                <a href="#" class="btn" data-i18n="heroButton">Reservar ahora</a>
             </div>
         </div>
     </section>
 
     <section class="section">
-        <h2 class="section-title">Habitaciones</h2>
+        <h2 class="section-title" data-i18n="roomsTitle">Habitaciones</h2>
 
         <div class="cards">
 
             <div class="card">
-                <img src="images/room.jpg" alt="Habitación Doble">
+                <img src="images/room.jpg" alt="Habitación Doble" data-i18n="room1Alt">
                 <div class="card-content">
-                    <h3>Habitación Doble</h3>
-                    <p>
+                    <h3 data-i18n="room1Title">Habitación Doble</h3>
+                    <p data-i18n="room1Text">
                         Amplias habitaciones con vistas panorámicas,
                         WiFi y servicio 24 horas.
                     </p>
@@ -43,20 +49,20 @@
             </div>
 
             <div class="card">
-                <img src="images/executive-suite.jpg" alt="Suite Ejecutiva">
+                <img src="images/executive-suite.jpg" alt="Suite Ejecutiva" data-i18n="room2Alt">
                 <div class="card-content">
-                    <h3>Suite Ejecutiva</h3>
-                    <p>
+                    <h3 data-i18n="room2Title">Suite Ejecutiva</h3>
+                    <p data-i18n="room2Text">
                         Diseñada para profesionales y clientes VIP.
                     </p>
                 </div>
             </div>
 
             <div class="card">
-                <img src="images/presidential-suite.jpg" alt="Suite Presidencial">
+                <img src="images/presidential-suite.jpg" alt="Suite Presidencial" data-i18n="room3Alt">
                 <div class="card-content">
-                    <h3>Suite Presidencial</h3>
-                    <p>
+                    <h3 data-i18n="room3Title">Suite Presidencial</h3>
+                    <p data-i18n="room3Text">
                         Máximo confort y exclusividad para estancias únicas.
                     </p>
                 </div>
@@ -67,28 +73,28 @@
 
     <section class="section">
 
-        <h2 class="section-title">Servicios</h2>
+        <h2 class="section-title" data-i18n="servicesTitle">Servicios</h2>
 
         <div class="services">
 
             <div class="service">
-                <h3>📶 WiFi Premium</h3>
-                <p>Conectividad de alta velocidad.</p>
+                <h3 data-i18n="service1Title">📶 WiFi Premium</h3>
+                <p data-i18n="service1Text">Conectividad de alta velocidad.</p>
             </div>
 
             <div class="service">
-                <h3>🏊 Piscina</h3>
-                <p>Piscina climatizada todo el año.</p>
+                <h3 data-i18n="service2Title">🏊 Piscina</h3>
+                <p data-i18n="service2Text">Piscina climatizada todo el año.</p>
             </div>
 
             <div class="service">
-                <h3>🍽 Restaurante</h3>
-                <p>Gastronomía local e internacional.</p>
+                <h3 data-i18n="service3Title">🍽 Restaurante</h3>
+                <p data-i18n="service3Text">Gastronomía local e internacional.</p>
             </div>
 
             <div class="service">
-                <h3>🚖 Transfer</h3>
-                <p>Traslado al aeropuerto 24 horas.</p>
+                <h3 data-i18n="service4Title">🚖 Transfer</h3>
+                <p data-i18n="service4Text">Traslado al aeropuerto 24 horas.</p>
             </div>
 
         </div>
@@ -97,20 +103,20 @@
 
     <section class="cta">
 
-        <h2>¿Necesitas ayuda para reservar?</h2>
+        <h2 data-i18n="ctaTitle">¿Necesitas ayuda para reservar?</h2>
 
-        <p>
+        <p data-i18n="ctaText">
             Nuestro asistente virtual está disponible 24x7 para resolver
             cualquier consulta.
         </p>
 
         <br>
 
-        <a href="#" class="btn">Contactar</a>
+        <a href="#" class="btn" data-i18n="ctaButton">Contactar</a>
 
     </section>
 
-    <footer>
+    <footer data-i18n="footer">
         © 2026 Hotel Mitel · Madrid · España
     </footer>
 
@@ -118,6 +124,7 @@
     <script>
         import(`https://eu.engage.app/api/ecs/v1/loader/1cc9cc96-e572-4357-b645-b3f1b7cea843.js?path=${encodeURIComponent(window.location.origin+window.location.pathname)}&selectedVersion=${(new URLSearchParams(window.location.search)).get('ecsSelectedVersion') || ''}`)
     </script>
+    <script src="js/i18n.js"></script>
 
 </body>
 
