@@ -5,7 +5,11 @@ const translations = {
       title: 'Portal de Demos Mitel',
       subtitle: 'Selecciona una demostración para acceder al escenario correspondiente.',
       cta: 'Demo Hotel Mitel',
-      ctaMunicipality: 'Demo Ayuntamiento Mitel'
+      ctaMunicipality: 'Demo Ayuntamiento Mitel',
+      hotelName: 'Hotel',
+      municipalityName: 'Ayuntamiento',
+      enterAction: 'Entrar',
+      viewQuestions: 'Ver preguntas'
     },
     hotel: {
       pageTitle: 'Hotel Mitel',
@@ -87,7 +91,11 @@ const translations = {
       title: 'Mitel Demo Portal',
       subtitle: 'Select a demo to access the corresponding scenario.',
       cta: 'Mitel Hotel Demo',
-      ctaMunicipality: 'Municipalities Demo'
+      ctaMunicipality: 'Municipalities Demo',
+      hotelName: 'Hotel',
+      municipalityName: 'Municipality',
+      enterAction: 'Enter',
+      viewQuestions: 'View questions'
     },
     hotel: {
       pageTitle: 'Mitel Hotel',
@@ -174,7 +182,11 @@ const translations = {
       title: 'Portal de Demonstrações Mitel',
       subtitle: 'Selecione uma demonstração para aceder ao cenário correspondente.',
       cta: 'Demo de Hotel Mitel',
-      ctaMunicipality: 'Demo de Cidades'
+      ctaMunicipality: 'Demo de Cidades',
+      hotelName: 'Hotel',
+      municipalityName: 'Município',
+      enterAction: 'Entrar',
+      viewQuestions: 'Ver perguntas'
     },
     hotel: {
       pageTitle: 'Hotel Mitel',

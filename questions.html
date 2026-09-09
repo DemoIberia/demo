@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de preguntas</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="questions-window">
+    <main class="questions-container">
+        <header class="questions-header">
+            <h1 id="title">Hotel Mitel</h1>
+        </header>
+        <ul id="questionsList" class="questions-list"></ul>
+    </main>
+
+    <script src="js/scenarioQuestions.js"></script>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const scenarioKey = params.get('scenario') || 'hotel';
+        const lang = params.get('lang') || 'es';
+        const titleMap = {
+            hotel: {
+                es: 'Hotel Mitel',
+                en: 'Mitel Hotel',
+                pt: 'Hotel Mitel'
+            },
+            municipality: {
+                es: 'Ayuntamiento',
+                en: 'Municipality',
+                pt: 'Município'
+            }
+        };
+
+        const scenario = scenarioQuestions[scenarioKey] || scenarioQuestions.hotel;
+        const prompts = scenario[lang] || scenario.es || [];
+
+        document.getElementById('title').textContent = titleMap[scenarioKey]?.[lang] || 'Escenario';
+
+        const listEl = document.getElementById('questionsList');
+
+        listEl.innerHTML = prompts.map(({ question, answer }) => {
+            const answerHtml = answer ? `<div class="answer-text">${answer}</div>` : '';
+            return `
+                <li class="question-item">
+                    <div class="question-text">${question}</div>
+                    ${answerHtml}
+                </li>
+            `;
+        }).join('');
+    </script>
+</body>
+</html>

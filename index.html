@@ -24,18 +24,49 @@
             Selecciona una demostración para acceder al escenario correspondiente.
         </p>
 
-        <a href="hotel.html" class="demo-button">
-            <img src="images/hospitality.svg" alt="Hospitality icon" class="icon">
-            <span data-i18n="cta">Demo Hotel Mitel</span>
-        </a>
+        <div class="demo-list" aria-label="Lista de escenarios">
+            <div class="demo-item">
+                <div class="scenario-name">
+                    <img src="images/hospitality.svg" alt="Hotel icon" class="scenario-icon">
+                    <span data-i18n="hotelName">Hotel</span>
+                </div>
+                <div class="demo-actions">
+                    <a href="hotel.html" class="table-action primary" data-i18n="enterAction">Entrar</a>
+                    <button type="button" class="table-action secondary open-questions" data-scenario="hotel" data-i18n="viewQuestions">
+                        Ver preguntas
+                    </button>
+                </div>
+            </div>
 
-        <a href="municipality.html" class="demo-button" style="margin-top: 16px;">
-            <img src="images/municipality.svg" alt="Municipality icon" class="icon">
-            <span data-i18n="ctaMunicipality">Demo Ayuntamiento</span>
-        </a>
+            <div class="demo-item">
+                <div class="scenario-name">
+                    <img src="images/municipality.svg" alt="Municipality icon" class="scenario-icon">
+                    <span data-i18n="municipalityName">Ayuntamiento</span>
+                </div>
+                <div class="demo-actions">
+                    <a href="municipality.html" class="table-action primary" data-i18n="enterAction">Entrar</a>
+                    <button type="button" class="table-action secondary open-questions" data-scenario="municipality" data-i18n="viewQuestions">
+                        Ver preguntas
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="js/i18n.js"></script>
+    <script>
+        document.querySelectorAll('.open-questions').forEach((button) => {
+            button.addEventListener('click', () => {
+                const scenario = button.dataset.scenario || 'hotel';
+                const lang = localStorage.getItem('site-lang') || 'es';
+                window.open(
+                    `questions.html?scenario=${scenario}&lang=${lang}`,
+                    '_blank',
+                    'noopener,noreferrer,width=560,height=680'
+                );
+            });
+        });
+    </script>
 </body>
 
 </html>
