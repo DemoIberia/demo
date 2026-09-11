@@ -1,5 +1,8 @@
 const translations = {
   es: {
+    questions: {
+      showLabel: 'Mostrar:'
+    },
     home: {
       pageTitle: 'Portal de Demos Mitel',
       title: 'Portal de Demos Mitel',
@@ -86,6 +89,9 @@ const translations = {
     }
   },
   en: {
+    questions: {
+      showLabel: 'Show:'
+    },
     home: {
       pageTitle: 'Mitel Demo Portal',
       title: 'Mitel Demo Portal',
@@ -177,6 +183,9 @@ const translations = {
     }
   },
   pt: {
+    questions: {
+      showLabel: 'Mostrar:'
+    },
     home: {
       pageTitle: 'Portal de Demonstrações Mitel',
       title: 'Portal de Demonstrações Mitel',

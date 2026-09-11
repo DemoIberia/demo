@@ -6,19 +6,108 @@
     <title>Guía de preguntas</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="questions-window">
+<body class="questions-window" data-page="questions">
     <main class="questions-container">
         <header class="questions-header">
             <h1 id="title">Hotel Mitel</h1>
+            <div class="questions-language-selector">
+                <span class="show-label" data-i18n="showLabel">Mostrar:</span>
+                <div class="lang-switcher secondary-lang-switcher" aria-label="Secondary language selector">
+                    <button type="button" class="lang-btn" data-lang="es">ES</button>
+                    <button type="button" class="lang-btn" data-lang="en">EN</button>
+                    <button type="button" class="lang-btn" data-lang="pt">PT</button>
+                    <button type="button" class="lang-btn" data-lang="ca">CA</button>
+                    <button type="button" class="lang-btn" data-lang="gl">GL</button>
+                    <button type="button" class="lang-btn" data-lang="eu">EU</button>
+                </div>
+            </div>
         </header>
         <ul id="questionsList" class="questions-list"></ul>
     </main>
 
+    <style>
+        .questions-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 22px;
+            background: linear-gradient(90deg, var(--mitel-dark-blue), var(--mitel-mid-blue));
+            border-radius: 14px;
+            padding: 18px 20px;
+        }
+
+        .questions-language-selector {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        .show-label {
+            color: white;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .secondary-lang-switcher {
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .secondary-lang-switcher .lang-btn {
+            padding: 7px 12px;
+            font-size: 0.78rem;
+            min-width: 46px;
+        }
+
+        .lang-column {
+            flex: 1 1 260px;
+            min-width: 0;
+        }
+
+        .lang-badge {
+            display: inline-block;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            color: var(--mitel-mid-blue);
+            background: #edf3ff;
+            border-radius: 999px;
+            padding: 5px 10px;
+            margin-bottom: 8px;
+        }
+
+        .question-item {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .question-item.single-column {
+            grid-template-columns: 1fr;
+        }
+
+        @media (max-width: 640px) {
+            .question-item {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+    <script src="js/i18n.js"></script>
     <script src="js/scenarioQuestions.js"></script>
     <script>
         const params = new URLSearchParams(window.location.search);
         const scenarioKey = params.get('scenario') || 'hotel';
-        const lang = params.get('lang') || 'es';
+        const primaryLang = ['es', 'en', 'pt'].includes(params.get('lang')) ? params.get('lang') : 'es';
+        const secondaryLanguageOptions = ['es', 'en', 'pt', 'ca', 'gl', 'eu'];
+
         const titleMap = {
             hotel: {
                 es: 'Hotel Mitel',
@@ -32,22 +121,92 @@
             }
         };
 
+        const sanitizeSecondaryLang = (lang) => {
+            if (!secondaryLanguageOptions.includes(lang)) {
+                return primaryLang;
+            }
+
+            return lang;
+        };
+
         const scenario = scenarioQuestions[scenarioKey] || scenarioQuestions.hotel;
-        const prompts = scenario[lang] || scenario.es || [];
+        const selectedSecondaryLang = sanitizeSecondaryLang(
+            params.get('secondaryLang') || localStorage.getItem('questions-secondary-lang') || primaryLang
+        );
+        const showSecondary = selectedSecondaryLang !== primaryLang;
+        const showLabelEl = document.querySelector('.show-label');
+        const languageButtons = document.querySelectorAll('.secondary-lang-switcher .lang-btn');
 
-        document.getElementById('title').textContent = titleMap[scenarioKey]?.[lang] || 'Escenario';
+        const buildItem = (entry, lang) => {
+            if (!entry) {
+                return `
+                    <div class="lang-column empty">
+                        <div class="lang-badge">${lang.toUpperCase()}</div>
+                        <div class="question-text">—</div>
+                        <div class="answer-text">—</div>
+                    </div>
+                `;
+            }
 
-        const listEl = document.getElementById('questionsList');
-
-        listEl.innerHTML = prompts.map(({ question, answer }) => {
-            const answerHtml = answer ? `<div class="answer-text">${answer}</div>` : '';
             return `
-                <li class="question-item">
-                    <div class="question-text">${question}</div>
-                    ${answerHtml}
-                </li>
+                <div class="lang-column">
+                    <div class="lang-badge">${lang.toUpperCase()}</div>
+                    <div class="question-text">${entry.question || ''}</div>
+                    <div class="answer-text">${entry.answer || ''}</div>
+                </div>
             `;
-        }).join('');
+        };
+
+        function renderQuestions() {
+            const primaryPrompts = scenario[primaryLang] || scenario.es || [];
+            const secondaryPrompts = showSecondary ? (scenario[selectedSecondaryLang] || scenario[primaryLang] || scenario.es || []) : [];
+            const maxLength = Math.max(primaryPrompts.length, secondaryPrompts.length || 0);
+
+            document.getElementById('title').textContent = titleMap[scenarioKey]?.[primaryLang] || 'Escenario';
+            document.documentElement.lang = primaryLang;
+            if (showLabelEl) {
+                showLabelEl.textContent = translations[primaryLang]?.questions?.showLabel || 'Mostrar:';
+            }
+
+            languageButtons.forEach((button) => {
+                const isActive = button.dataset.lang === selectedSecondaryLang;
+                button.classList.toggle('active', isActive);
+            });
+
+            const listEl = document.getElementById('questionsList');
+            listEl.innerHTML = Array.from({ length: maxLength }, (_, index) => {
+                const primaryEntry = primaryPrompts[index] || primaryPrompts[0] || null;
+                const secondaryEntry = secondaryPrompts[index] || secondaryPrompts[0] || null;
+
+                if (!showSecondary) {
+                    return `
+                        <li class="question-item single-column">
+                            ${buildItem(primaryEntry, primaryLang)}
+                        </li>
+                    `;
+                }
+
+                return `
+                    <li class="question-item">
+                        ${buildItem(primaryEntry, primaryLang)}
+                        ${buildItem(secondaryEntry, selectedSecondaryLang)}
+                    </li>
+                `;
+            }).join('');
+        }
+
+        languageButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                const nextSecondary = sanitizeSecondaryLang(button.dataset.lang);
+                const url = new URL(window.location.href);
+                url.searchParams.set('secondaryLang', nextSecondary);
+                window.history.replaceState({}, '', url);
+                localStorage.setItem('questions-secondary-lang', nextSecondary);
+                window.location.reload();
+            });
+        });
+
+        renderQuestions();
     </script>
 </body>
 </html>
