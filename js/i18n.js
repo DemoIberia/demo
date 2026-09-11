@@ -10,7 +10,7 @@ const translations = {
       cta: 'Demo Hotel Mitel',
       ctaMunicipality: 'Demo Ayuntamiento Mitel',
       hotelName: 'Hotel',
-      municipalityName: 'Ayuntamiento',
+      municipalityName: 'Administración pública',
       enterAction: 'Entrar',
       viewQuestions: 'Ver preguntas'
     },
@@ -99,7 +99,7 @@ const translations = {
       cta: 'Mitel Hotel Demo',
       ctaMunicipality: 'Municipalities Demo',
       hotelName: 'Hotel',
-      municipalityName: 'Municipality',
+      municipalityName: 'Public administration',
       enterAction: 'Enter',
       viewQuestions: 'View questions'
     },
@@ -193,7 +193,7 @@ const translations = {
       cta: 'Demo de Hotel Mitel',
       ctaMunicipality: 'Demo de Cidades',
       hotelName: 'Hotel',
-      municipalityName: 'Município',
+      municipalityName: 'Administração pública',
       enterAction: 'Entrar',
       viewQuestions: 'Ver perguntas'
     },

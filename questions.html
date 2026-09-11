@@ -35,19 +35,6 @@
         const primaryLang = ['es', 'en', 'pt'].includes(params.get('lang')) ? params.get('lang') : 'es';
         const secondaryLanguageOptions = ['es', 'en', 'pt', 'ca', 'gl', 'eu'];
 
-        const titleMap = {
-            hotel: {
-                es: 'Hotel Mitel',
-                en: 'Mitel Hotel',
-                pt: 'Hotel Mitel'
-            },
-            municipality: {
-                es: 'Ayuntamiento',
-                en: 'Municipality',
-                pt: 'Município'
-            }
-        };
-
         const sanitizeSecondaryLang = (lang) => {
             if (!secondaryLanguageOptions.includes(lang)) {
                 return primaryLang;
@@ -88,7 +75,10 @@
             const questionBlocks = Array.isArray(scenario) ? scenario : [];
             const maxLength = questionBlocks.length;
 
-            document.getElementById('title').textContent = titleMap[scenarioKey]?.[primaryLang] || 'Escenario';
+            const scenarioTitle = scenarioKey === 'hotel'
+                ? (translations[primaryLang]?.home?.hotelName || 'Hotel')
+                : (translations[primaryLang]?.home?.municipalityName || 'Administración pública');
+            document.getElementById('title').textContent = scenarioTitle;
             document.documentElement.lang = primaryLang;
             if (showLabelEl) {
                 showLabelEl.textContent = translations[primaryLang]?.questions?.showLabel || 'Mostrar:';
