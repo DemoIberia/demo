@@ -83,9 +83,8 @@
         };
 
         function renderQuestions() {
-            const primaryPrompts = scenario[primaryLang] || scenario.es || [];
-            const secondaryPrompts = showSecondary ? (scenario[selectedSecondaryLang] || scenario[primaryLang] || scenario.es || []) : [];
-            const maxLength = Math.max(primaryPrompts.length, secondaryPrompts.length || 0);
+            const questionBlocks = Array.isArray(scenario) ? scenario : [];
+            const maxLength = questionBlocks.length;
 
             document.getElementById('title').textContent = titleMap[scenarioKey]?.[primaryLang] || 'Escenario';
             document.documentElement.lang = primaryLang;
@@ -100,8 +99,9 @@
 
             const listEl = document.getElementById('questionsList');
             listEl.innerHTML = Array.from({ length: maxLength }, (_, index) => {
-                const primaryEntry = primaryPrompts[index] || primaryPrompts[0] || null;
-                const secondaryEntry = secondaryPrompts[index] || secondaryPrompts[0] || null;
+                const item = questionBlocks[index] || {};
+                const primaryEntry = item[primaryLang] || item.es || null;
+                const secondaryEntry = showSecondary ? (item[selectedSecondaryLang] || item[primaryLang] || item.es || null) : null;
 
                 if (!showSecondary) {
                     return `
