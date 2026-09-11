@@ -13,12 +13,12 @@
             <div class="questions-language-selector">
                 <span class="show-label" data-i18n="showLabel">Mostrar:</span>
                 <div class="lang-switcher secondary-lang-switcher" aria-label="Secondary language selector">
-                    <button type="button" class="lang-btn" data-lang="es">ES</button>
-                    <button type="button" class="lang-btn" data-lang="en">EN</button>
-                    <button type="button" class="lang-btn" data-lang="pt">PT</button>
-                    <button type="button" class="lang-btn" data-lang="ca">CA</button>
-                    <button type="button" class="lang-btn" data-lang="gl">GL</button>
-                    <button type="button" class="lang-btn" data-lang="eu">EU</button>
+                    <button type="button" class="secondary-lang-btn" data-lang="es">ES</button>
+                    <button type="button" class="secondary-lang-btn" data-lang="en">EN</button>
+                    <button type="button" class="secondary-lang-btn" data-lang="pt">PT</button>
+                    <button type="button" class="secondary-lang-btn" data-lang="ca">CA</button>
+                    <button type="button" class="secondary-lang-btn" data-lang="gl">GL</button>
+                    <button type="button" class="secondary-lang-btn" data-lang="eu">EU</button>
                 </div>
             </div>
         </header>
@@ -60,10 +60,28 @@
             gap: 8px;
         }
 
-        .secondary-lang-switcher .lang-btn {
+        .secondary-lang-btn {
+            border: 1px solid var(--mitel-dark-blue);
+            background: #f3f7fb;
+            color: var(--mitel-dark-blue);
             padding: 7px 12px;
+            border-radius: 999px;
+            cursor: pointer;
+            font-weight: 600;
             font-size: 0.78rem;
             min-width: 46px;
+            transition: all 0.2s ease;
+        }
+
+        .secondary-lang-btn:hover {
+            background: #e8f0f8;
+            transform: translateY(-1px);
+        }
+
+        .secondary-lang-btn.active {
+            background: var(--mitel-dark-blue);
+            color: white;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
         }
 
         .lang-column {
@@ -135,7 +153,7 @@
         );
         const showSecondary = selectedSecondaryLang !== primaryLang;
         const showLabelEl = document.querySelector('.show-label');
-        const languageButtons = document.querySelectorAll('.secondary-lang-switcher .lang-btn');
+        const languageButtons = document.querySelectorAll('.secondary-lang-switcher .secondary-lang-btn');
 
         const buildItem = (entry, lang) => {
             if (!entry) {
