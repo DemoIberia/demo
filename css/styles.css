@@ -179,6 +179,30 @@ body {
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
+.secondary-lang-btn {
+    border: 1px solid var(--mitel-dark-blue);
+    background: #f3f7fb;
+    color: var(--mitel-dark-blue);
+    padding: 7px 12px;
+    border-radius: 999px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.78rem;
+    min-width: 46px;
+    transition: all 0.2s ease;
+}
+
+.secondary-lang-btn:hover {
+    background: #e8f0f8;
+    transform: translateY(-1px);
+}
+
+.secondary-lang-btn.active {
+    background: var(--mitel-dark-blue);
+    color: white;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
 .home-page .container {
     display: flex;
     flex-direction: column;
@@ -469,7 +493,37 @@ footer {
 }
 
 .questions-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
     margin-bottom: 22px;
+    background: linear-gradient(90deg, var(--mitel-dark-blue), var(--mitel-mid-blue));
+    border-radius: 14px;
+    padding: 18px 20px;
+}
+
+.questions-language-selector {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.show-label {
+    color: white;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.secondary-lang-switcher {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
 }
 
 .questions-header h1 {
@@ -489,11 +543,35 @@ footer {
 }
 
 .question-item {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
     background: #f7faff;
     border-left: 4px solid var(--mitel-yellow);
     border-radius: 10px;
     padding: 14px 16px;
     line-height: 1.6;
+}
+
+.question-item.single-column {
+    grid-template-columns: 1fr;
+}
+
+.lang-column {
+    flex: 1 1 260px;
+    min-width: 0;
+}
+
+.lang-badge {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--mitel-mid-blue);
+    background: #edf3ff;
+    border-radius: 999px;
+    padding: 5px 10px;
+    margin-bottom: 8px;
 }
 
 .question-text {
@@ -508,4 +586,10 @@ footer {
     border-radius: 8px;
     padding: 10px 12px;
     border: 1px solid #e8eef9;
+}
+
+@media (max-width: 640px) {
+    .question-item {
+        grid-template-columns: 1fr;
+    }
 }
