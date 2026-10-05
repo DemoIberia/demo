@@ -421,42 +421,54 @@ const municipalityQuestions = [
   },
   {
     "es": {
-      "question": "Quiero abrir un pequeño establecimiento y necesito saber qué requisitos debo cumplir. ¿Dónde puedo consultar licencias, normativa, horarios y los pasos para ponerlo en marcha?"
+      "question": "Quiero abrir un pequeño establecimiento y necesito saber qué requisitos debo cumplir. ¿Dónde puedo consultar licencias, normativa, horarios y los pasos para ponerlo en marcha?",
+      "answer": "Para abrir un pequeño establecimiento, es necesario cumplir con varios requisitos administrativos y legales. Debes informarte sobre las licencias necesarias, la normativa aplicable, los horarios permitidos y los pasos para poner en marcha tu negocio. La información clave incluye la obtención de licencias de apertura, cumplir con la normativa de comercio y consumo, y respetar los horarios establecidos por la administración."
     },
     "en": {
-      "question": "I want to open a small retail establishment and I need to know which requirements I must meet. Where can I find information on licences, regulations, opening hours and the steps to get started?"
+      "question": "I want to open a small retail establishment and I need to know which requirements I must meet. Where can I find information on licences, regulations, opening hours and the steps to get started?",
+      "answer": "To open a small business, it is necessary to meet several administrative and legal requirements. You should find out about the permits required, the applicable regulations, the permitted opening hours and the steps to get your business up and running. The key information includes obtaining the opening licences, complying with trade and consumer regulations, and respecting the schedules set by the administration."
     },
     "pt": {
-      "question": "Quero abrir um pequeno estabelecimento comercial e preciso de saber que requisitos tenho de cumprir. Onde posso consultar licenças, regulamentação, horários e os passos necessários para começar?"
+      "question": "Quero abrir um pequeno estabelecimento comercial e preciso de saber que requisitos tenho de cumprir. Onde posso consultar licenças, regulamentação, horários e os passos necessários para começar?",
+      "answer": "Para abrir um pequeno estabelecimento, é necessário cumprir vários requisitos administrativos e legais. Deve informar-se sobre as licenças necessárias, a legislação aplicável, os horários permitidos e os passos para pôr o negócio em funcionamento. A informação-chave inclui a obtenção de licenças de abertura, o cumprimento da normativa comercial e de consumo e o respeito aos horários estabelecidos pela administração."
     },
     "ca": {
-      "question": "Vull obrir un petit establiment comercial i necessito saber quins requisits he de complir. On puc consultar llicències, normativa, horaris i els passos per posar-lo en marxa?"
+      "question": "Vull obrir un petit establiment comercial i necessito saber quins requisits he de complir. On puc consultar llicències, normativa, horaris i els passos per posar-lo en marxa?",
+      "answer": "Per obrir un petit establiment, cal complir diversos requisits administratius i legals. Has d’informar-te sobre les llicències necessàries, la normativa aplicable, els horaris permesos i els passos per posar en marxa el negoci. La informació clau inclou l’obtenció de llicències d’obertura, complir la normativa de comerç i consum i respectar els horaris establerts per l’administració."
     },
     "gl": {
-      "question": "Quero abrir un pequeno establecemento comercial e necesito saber que requisitos debo cumprir. Onde podo consultar licenzas, normativa, horarios e os pasos para poñelo en marcha?"
+      "question": "Quero abrir un pequeno establecemento comercial e necesito saber que requisitos debo cumprir. Onde podo consultar licenzas, normativa, horarios e os pasos para poñelo en marcha?",
+      "answer": "Para abrir un pequeno establecemento, é necesario cumprir varios requisitos administrativos e legais. Debes informarte sobre as licenzas necesarias, a normativa aplicable, os horarios permitidos e os pasos para poñer en marcha o teu negocio. A información chave inclúe a obtención de licenzas de apertura, cumprir a normativa de comercio e consumo e respectar os horarios establecidos pola administración."
     },
     "eu": {
-      "question": "Merkataritza-establezimendu txiki bat ireki nahi dut eta zer baldintza bete behar ditudan jakin behar dut. Non kontsulta ditzaket lizentziak, araudia, ordutegiak eta martxan jartzeko urratsak?"
+      "question": "Merkataritza-establezimendu txiki bat ireki nahi dut eta zer baldintza bete behar ditudan jakin behar dut. Non kontsulta ditzaket lizentziak, araudia, ordutegiak eta martxan jartzeko urratsak?",
+      "answer": "Etxebizitza-txiki bat irekitzeko, hainbat baldintza administratibo eta juridiko bete behar dira. Beharrezko lizentziak, aplikagarriak diren arauak, baimendutako ordutegiak eta negozioa martxan jartzeko urratsak jakin behar dituzu. Informazio gakoa da hasierako lizentziak lortzea, salmenta eta kontsumo araudia betetzea eta administrazioak ezarritako ordutegiak errespetatzea."
     }
   },
   {
     "es": {
-      "question": "He tenido un problema con una empresa y no hemos conseguido resolverlo directamente. ¿Cómo puedo presentar una queja, reclamación o denuncia de consumo?"
+      "question": "He tenido un problema con una empresa y no hemos conseguido resolverlo directamente. ¿Cómo puedo presentar una queja, reclamación o denuncia de consumo?",
+      "answer": "Si has tenido un problema con una empresa y no lo has podido resolver directamente, puedes presentar una queja, reclamación o denuncia de consumo ante la administración pública. Puedes hacerlo en una Oficina de Atención Ciudadana, a través del buzón de contacto, pidiendo cita previa o utilizando el servicio de videoatención. También tienes la opción de presentar tu reclamación por internet mediante los trámites habilitados para ello."
     },
     "en": {
-      "question": "I have had a problem with a company and we have not been able to resolve it directly. How can I submit a consumer complaint, claim or report?"
+      "question": "I have had a problem with a company and we have not been able to resolve it directly. How can I submit a consumer complaint, claim or report?",
+      "answer": "If you have had a problem with a company and have not been able to resolve it directly, you can submit a consumer complaint, claim or report to the public administration. You can do so at a Citizen Service Office, through the contact mailbox, by requesting an appointment in advance or by using the video-assistance service. You can also submit your claim online through the procedures that are available for this purpose."
     },
     "pt": {
-      "question": "Tive um problema com uma empresa e não conseguimos resolvê-lo diretamente. Como posso apresentar uma queixa, reclamação ou denúncia de consumo?"
+      "question": "Tive um problema com uma empresa e não conseguimos resolvê-lo diretamente. Como posso apresentar uma queixa, reclamação ou denúncia de consumo?",
+      "answer": "Se teve um problema com uma empresa e não conseguiu resolvê-lo diretamente, pode apresentar uma queixa, reclamação ou denúncia de consumo junto da administração pública. Pode fazê-lo numa Oficina de Atendimento ao Cidadão, através da caixa de contacto, marcando uma consulta prévia ou utilizando o serviço de videoatendimento. Também pode apresentar a sua reclamação online através dos procedimentos habilitados para o efeito."
     },
     "ca": {
-      "question": "He tingut un problema amb una empresa i no l’hem pogut resoldre directament. Com puc presentar una queixa, reclamació o denúncia de consum?"
+      "question": "He tingut un problema amb una empresa i no l’hem pogut resoldre directament. Com puc presentar una queixa, reclamació o denúncia de consum?",
+      "answer": "Si has tingut un problema amb una empresa i no l’has pogut resoldre directament, pots presentar una queixa, reclamació o denúncia de consum davant l’administració pública. Ho pots fer en una Oficina d’Atenció Ciutadana, a través del bústia de contacte, demanant cita prèvia o utilitzant el servei de videatenció. També tens l’opció de presentar la teva reclamació per internet mitjançant els tràmits habilitats per a això."
     },
     "gl": {
-      "question": "Tiven un problema cunha empresa e non conseguimos resolvelo directamente. Como podo presentar unha queixa, reclamación ou denuncia de consumo?"
+      "question": "Tiven un problema cunha empresa e non conseguimos resolvelo directamente. Como podo presentar unha queixa, reclamación ou denuncia de consumo?",
+      "answer": "Se tiviches un problema cunha empresa e non o puidiches resolver directamente, podes presentar unha queixa, reclamación ou denuncia de consumo ante a administración pública. Podes facelo nunha Oficina de Atención á Cidadanía, a través do buzón de contacto, solicitando cita previa ou utilizando o servizo de videoatención. Tamén tes a opción de presentar a túa reclamación por internet mediante os trámites habilitados para iso."
     },
     "eu": {
-      "question": "Enpresa batekin arazo bat izan dut eta ezin izan dugu zuzenean konpondu. Nola aurkez dezaket kontsumoko kexa, erreklamazioa edo salaketa?"
+      "question": "Enpresa batekin arazo bat izan dut eta ezin izan dugu zuzenean konpondu. Nola aurkez dezaket kontsumoko kexa, erreklamazioa edo salaketa?",
+      "answer": "Enpresa batekin arazo bat izan baduzu eta ezin baduzu zuzenean konpondu, kontsumo-kexa, erreklamazioa edo salaketa aurkeztu ahal izango duzu administrazio publikora. Hori egin dezakezu Herritarren Arreta Bulego batean, kontaktu-buzoiaren bidez, aurretiko hitzordua eskatu edo bideo-zerbitzua erabiliz. Era berean, zure erreklamazioa internet bidez aurkezteko aukera ere baduzu, horretarako prestaturiko tramiteak erabilita."
     }
   },
   {

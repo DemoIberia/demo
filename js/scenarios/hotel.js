@@ -141,22 +141,28 @@ const hotelQuestions = [
   },
   {
     "es": {
-      "question": "Quiero sorprender a mi pareja por nuestro aniversario y me gustaría que la habitación fuese realmente especial. ¿Cuál me recomendaríais para una ocasión así?"
+      "question": "Quiero sorprender a mi pareja por nuestro aniversario y me gustaría que la habitación fuese realmente especial. ¿Cuál me recomendaríais para una ocasión así?",
+      "answer": "Para celebrar un aniversario y sorprender a su pareja, le recomiendo elegir una de nuestras suites, ya que ofrecen un ambiente romántico, privacidad y detalles de lujo. Las suites cuentan con cama king, baño de mármol con bañera y ducha efecto lluvia, salón independiente y servicio de cobertura dos veces al día. Si busca una experiencia aún más exclusiva, las Signature Suites destacan por su diseño elegante y vistas impresionantes, ideales para una ocasión especial."
     },
     "en": {
-      "question": "I'd like to surprise my partner for our anniversary and I'd love the room to feel truly special. Which one would you recommend for an occasion like this?"
+      "question": "I'd like to surprise my partner for our anniversary and I'd love the room to feel truly special. Which one would you recommend for an occasion like this?",
+      "answer": "To celebrate an anniversary and surprise your partner, I recommend choosing one of our suites, as they offer a romantic atmosphere, privacy and luxury details. The suites include a king-size bed, a marble bathroom with a bathtub and rainfall shower, a separate lounge and twice-daily housekeeping service. If you are looking for an even more exclusive experience, the Signature Suites stand out for their elegant design and stunning views, making them ideal for a special occasion."
     },
     "pt": {
-      "question": "Quero surpreender a minha cara-metade no nosso aniversário e gostava que o quarto fosse realmente especial. Qual me recomendaria para uma ocasião destas?"
+      "question": "Quero surpreender a minha cara-metade no nosso aniversário e gostava que o quarto fosse realmente especial. Qual me recomendaria para uma ocasião destas?",
+      "answer": "Para celebrar um aniversário e surpreender a sua cara-metade, recomendo escolher uma das nossas suítes, porque oferecem um ambiente romântico, privacidade e detalhes de luxo. As suítes incluem cama king-size, casa de banho em mármore com banheira e duche de chuva, sala separada e serviço de arrumação duas vezes por dia. Se procura uma experiência ainda mais exclusiva, as Signature Suites destacam-se pelo design elegante e pelas vistas impressionantes, ideais para uma ocasião especial."
     },
     "ca": {
-      "question": "Vull sorprendre la meva parella pel nostre aniversari i m'agradaria que l'habitació fos realment especial. Quina em recomanaríeu per a una ocasió així?"
+      "question": "Vull sorprendre la meva parella pel nostre aniversari i m'agradaria que l'habitació fos realment especial. Quina em recomanaríeu per a una ocasió així?",
+      "answer": "Per celebrar un aniversari i sorprendre la teva parella, us recomano triar una de les nostres suites, ja que ofereixen un ambient romàntic, privacitat i detalls de luxe. Les suites compten amb llit king size, bany de marbre amb banyera i dutxa de pluja, saló independent i servei de neteja dues vegades al dia. Si busqueu una experiència encara més exclusiva, les Signature Suites destaquen pel seu disseny elegant i les vistes impressionants, ideals per a una ocasió especial."
     },
     "gl": {
-      "question": "Quero sorprender á miña parella polo noso aniversario e gustaríame que a habitación fose realmente especial. Cal me recomendariades para unha ocasión así?"
+      "question": "Quero sorprender á miña parella polo noso aniversario e gustaríame que a habitación fose realmente especial. Cal me recomendariades para unha ocasión así?",
+      "answer": "Para celebrar un aniversario e sorprender á túa parella, recoméndoche escoller unha das nosas suites, xa que ofrecen un ambiente romántico, privacidade e detalles de luxo. As suites contan con cama king-size, baño de mármore con bañera e ducha de chuvia, salón independente e servizo de limpeza dúas veces ao día. Se buscas unha experiencia aínda máis exclusiva, as Signature Suites destacan polo seu deseño elegante e polas vistas impresionantes, ideais para unha ocasión especial."
     },
     "eu": {
-      "question": "Gure urteurrenean bikotekidea harritu nahi dut, eta gela benetan berezia izatea gustatuko litzaidake. Zein gomendatuko zenidakete horrelako une baterako?"
+      "question": "Gure urteurrenean bikotekidea harritu nahi dut, eta gela benetan berezia izatea gustatuko litzaidake. Zein gomendatuko zenidakete horrelako une baterako?",
+      "answer": "Urteurrena ospatu eta bikotekidea harritu nahi baduzu, gure suiteetako baten aukera gomendatuko nuke, ez baitute giro romantikoa, pribatutasuna eta luxuzko xehetasunak eskaintzen. Suiteek king-size ohea, marmolazko bainugela bainuontzi eta euria-dutxa batekin, aparteko salon bat eta eguneko bi aldiz garbitzeko zerbitzua dituzte. Esperientzia are esklusiboagoa bila baduzu, Signature Suites-ak nabarmentzen dira diseinu dotoreagatik eta ikuspegi ikusgarriak dituztelako, une berezirako aproposak direlako."
     }
   },
   {
@@ -261,22 +267,28 @@ const hotelQuestions = [
   },
   {
     "es": {
-      "question": "Después del vuelo suelo llegar bastante cargado de espalda y hombros. Si quisiera reservar un masaje para recuperarme, ¿cuál me recomendaríais?"
+      "question": "Después del vuelo suelo llegar bastante cargado de espalda y hombros. Si quisiera reservar un masaje para recuperarme, ¿cuál me recomendaríais?",
+      "answer": "Para aliviar la tensión en espalda y hombros tras un vuelo, le recomiendo el masaje 'Alivio de la tensión'. Este tratamiento se centra en la parte superior del cuerpo, utilizando técnicas simultáneas en rostro, cuello, escote y cuero cabelludo para disipar el estrés y la rigidez."
     },
     "en": {
-      "question": "After flying, I usually arrive with quite a lot of tension in my back and shoulders. If I wanted to book a massage to recover, which one would you recommend?"
+      "question": "After flying, I usually arrive with quite a lot of tension in my back and shoulders. If I wanted to book a massage to recover, which one would you recommend?",
+      "answer": "To relieve tension in the back and shoulders after a flight, I recommend the 'Tension Relief' massage. This treatment focuses on the upper body, using simultaneous techniques on the face, neck, décolleté and scalp to ease stress and stiffness."
     },
     "pt": {
-      "question": "Depois do voo costumo chegar com bastante tensão nas costas e nos ombros. Se quisesse reservar uma massagem para recuperar, qual me recomendaria?"
+      "question": "Depois do voo costumo chegar com bastante tensão nas costas e nos ombros. Se quisesse reservar uma massagem para recuperar, qual me recomendaria?",
+      "answer": "Para aliviar a tensão nas costas e nos ombros após um voo, recomendo a massagem 'Alívio da tensão'. Este tratamento centra-se na parte superior do corpo, utilizando técnicas simultâneas no rosto, pescoço, decote e couro cabeludo para dissipar o stress e a rigidez."
     },
     "ca": {
-      "question": "Després del vol acostumo a arribar amb força tensió a l'esquena i les espatlles. Si volgués reservar un massatge per recuperar-me, quin em recomanaríeu?"
+      "question": "Després del vol acostumo a arribar amb força tensió a l'esquena i les espatlles. Si volgués reservar un massatge per recuperar-me, quin em recomanaríeu?",
+      "answer": "Per alleujar la tensió a l'esquena i les espatlles després d'un vol, us recomano el massatge 'Alleujament de la tensió'. Aquest tractament es centra en la part superior del cos, utilitzant tècniques simultànies a la cara, el coll, l'espatlla i el cuir cabellut per dissipar l'estrès i la rigidesa."
     },
     "gl": {
-      "question": "Despois do voo adoito chegar con bastante tensión nas costas e nos ombreiros. Se quixese reservar unha masaxe para recuperarme, cal me recomendariades?"
+      "question": "Despois do voo adoito chegar con bastante tensión nas costas e nos ombreiros. Se quixese reservar unha masaxe para recuperarme, cal me recomendariades?",
+      "answer": "Para aliviar a tensión nas costas e nos ombreiros despois dun voo, recoméndoche a masaxe 'Alivio da tensión'. Este tratamento céntrase na parte superior do corpo, utilizando técnicas simultáneas na cara, pescozo, escote e coiro cabeludo para disipar o estrés e a rigidez."
     },
     "eu": {
-      "question": "Hegaldiaren ondoren bizkarrean eta sorbaldetan tentsio handiarekin iritsi ohi naiz. Suspertzeko masaje bat erreserbatu nahi banu, zein gomendatuko zenidakete?"
+      "question": "Hegaldiaren ondoren bizkarrean eta sorbaldetan tentsio handiarekin iritsi ohi naiz. Suspertzeko masaje bat erreserbatu nahi banu, zein gomendatuko zenidakete?",
+      "answer": "Hegaldiaren ondoren bizkarrean eta sorbaldetan tentsioa arintzeko, 'Tentsioa arintzeko' masajea gomendatuko nuke. Tratamendu honek gorputzaren goiko aldea jorratzen du, aurpegian, lepokoan, lepo-ertzaldean eta buruazalean aldi berean aplikatzen diren teknikekin estresa eta zurruntasuna arintzeko."
     }
   },
   {
