@@ -262,23 +262,6 @@ header {
     margin-bottom: 30px;
 }
 
-.btn {
-    display: inline-block;
-    background: var(--mitel-mid-blue);
-    color: white;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 8px;
-    font-size: 18px;
-    text-decoration: none;
-    transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
-.btn:hover {
-    transform: translateY(-2px);
-    opacity: 0.95;
-}
-
 .section {
     max-width: 1200px;
     margin: auto;
@@ -337,18 +320,6 @@ header {
 .service h3 {
     color: var(--mitel-mid-blue);
     margin-bottom: 10px;
-}
-
-.cta {
-    background: linear-gradient(90deg, var(--mitel-dark-blue), var(--mitel-mid-blue));
-    color: white;
-    text-align: center;
-    padding: 80px 30px;
-}
-
-.cta h2 {
-    font-size: clamp(2rem, 3vw, 2.6rem);
-    margin-bottom: 20px;
 }
 
 footer {
